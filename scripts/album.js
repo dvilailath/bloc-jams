@@ -1,4 +1,4 @@
- // Example Album
+// Example Album
  var albumPicasso = {
      title: 'The Colors',
      artist: 'Pablo Picasso',
@@ -13,7 +13,7 @@
          { title: 'Magenta', duration: '2:15'}
      ]
  };
-
+ 
  // Another Example Album
  var albumMarconi = {
      title: 'The Telephone',
@@ -29,6 +29,24 @@
          { title: 'Wrong phone number', duration: '2:15'}
      ]
  };
+
+// Album #3
+
+ var albumIDecided = {
+     title: 'I Decided',
+     artist: 'Big Sean',
+     label: 'Good Muizk',
+     year: '2017',
+     albumArtUrl: 'assets/images/album_covers/20.png',
+     songs: [
+         { title: 'Intro', duration: '1:01' },
+         { title: 'Light', duration: '5:01' },
+         { title: 'Bounce Back', duration: '3:21'},
+         { title: 'No Favors', duration: '3:14' },
+         { title: 'Bounce Back', duration: '2:15'}
+     ]
+ };
+
 
  var createSongRow = function(songNumber, songName, songLength) {
      var template =
@@ -68,3 +86,9 @@
  window.onload = function() {
      setCurrentAlbum(albumPicasso);
  };
+
+var albumCover = albumImage;
+
+albumCover.addEventListener("click", function(toggleList){
+
+});
