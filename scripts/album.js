@@ -60,6 +60,13 @@
      return template;
  };
 
+//Example #1 For Set album
+var albumTitle = document.getElementsByClassName('album-view-title')[0];
+var albumArtist = document.getElementsByClassName('album-view-artist')[0];
+var albumReleaseInfo = document.getElementsByClassName('album-view-release-info')[0];
+var albumImage = document.getElementsByClassName('album-cover-art')[0];
+var albumSongList = document.getElementsByClassName('album-view-song-list')[0];
+
  var setCurrentAlbum = function(album) {
      // #1
      var albumTitle = document.getElementsByClassName('album-view-title')[0];
@@ -85,10 +92,17 @@
  
  window.onload = function() {
      setCurrentAlbum(albumPicasso);
+     
+     var albumCover = albumImage;
+     
+     var albumList = [albumPicasso, albumMarconi, albumIDecided];
+     var index = 0;
+     albumCover.addEventListener("click", function(toggleList){
+        setCurrentAlbum(albumList[index]);
+        index++;
+        if (index == albumList.length) {
+            index = 0;
+        }
+     });
  };
 
-var albumCover = albumImage;
-
-albumCover.addEventListener("click", function(toggleList){
-
-});
