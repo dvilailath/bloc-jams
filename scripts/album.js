@@ -66,19 +66,19 @@
  };
  
 var findParentByClassName = function(element, targetClass) {
-    if (element) {
-        var currentParent = element.parentElement;
-        while (currentParent.className !== targetClass && currentParent.className !== null) {
-            currentParent = currentParent.parentElement;
-        }
-        return currentParent;
-    } else if (element.parentElement) {
+    if (!element.parentElement) {
         console.log("No parent found.");
-    } else if (element.parentElement.parentElement){
-        console.log("No parent found with that class name.");
+    } else if (element.parentElement.className !== targetClass) {
+        console.log("No parent found with that classname");
+    } else if (element) {
+        var currentParent = element.parentElement;
+            while(currentParent.className !== targetClass && currentParent.className !== "null"){
+                currentParent = currentParent.parentElement;    
+            }
+        console.log(currentParent);
+        return currentParent;
     }
 };
-
 var getSongItem = function(element) {
     switch (element.className) {
         case 'album-song-button':
