@@ -37,7 +37,7 @@ var createSongRow = function (songNumber, songName, songLength) {
          // Switch from Pause -> Play button to pause currently playing song.
          $(this).html(playButtonTemplate);
          $('.main-controls .play-pause').html(playerBarPlayButton);
-         setSong(songNumber) = null;
+         setSong(null);
      }
 
  };
